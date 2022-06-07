@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/form.css"/>
+    <script defer src="js/loadPhotos.js"></script>
+    <title>Document</title>
+    <style>
+        div {
+            height: 300px;
+            width: 200px;
+        }
+
+        #gif-storage {
+            width: 800px;
+            margin: auto;
+            display: grid;
+            gap: 2px 2px;
+            justify-items: center;
+            grid-template-columns: repeat(4, 200px);
+            grid-template-rows: repeat(4, 300px);
+            grid-auto-columns: repeat(4, 200px);
+            grid-auto-rows: repeat(4, 300px);
+        }
+    </style>
+</head>
+<body>
+<div id="images-left"></div>
+<div id="gif-storage"></div>
+</body>
+</html>

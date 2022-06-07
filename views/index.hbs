@@ -1,0 +1,9 @@
+﻿<div class="search-container">
+    <input type="text" id="search-text" placeholder="Search.." name="search">
+    <button type="submit" id="search-button">Submit</button>
+</div>
+<div id="main-content">
+    {{#each results}}
+        {{> cards this}}
+    {{/each}}
+</div>

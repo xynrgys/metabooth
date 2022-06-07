@@ -1,0 +1,16 @@
+<form class="registration-form" onsubmit="registrationCheck()" method="post" action="/users/registration"
+      enctype="application/x-www-form-urlencoded">
+    <p id="usernameNotice">Username:</p>
+    <input type="text" name="username" id="username" placeholder="username" required><br>
+    <p id="emailNotice">Email:</p>
+    <input type="email" name="email" id="email" placeholder="email" required><br>
+    <p id="passwordNotice">Password:</p>
+    <input type="password" name="password" id="password" placeholder="password" required><br>
+    <p>Confirm Password:</p>
+    <input type="password" name="passwordConfirm" id="passwordConfirm" placeholder="password" required><br>
+    <p>Are you 13 years old or older?</p>
+    <input type="checkbox" name="age" required>
+    <p>Do you agree to our <a href="/tos.html">Terms of Service</a> and <a href="/privacy.html">Privacy Rules</a>?</p>
+    <input type="checkbox" name="terms" required><br>
+    <input type="submit" name="submit" required>
+</form>

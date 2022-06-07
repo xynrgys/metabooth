@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Young's Web Application</title>
+    <link rel="stylesheet" type="text/css" href="/public/css/main.css">
+    <script type="text/javascript" src="public/js/main.js"></script>
+    <script defer src="public/js/frontend.js"></script>
+    <title>{{title}}</title>
+    <link rel="icon" href="/public/favicon.ico" sizes="70x70" type="image/ico">
+    <link rel='stylesheet' href='/public/css/style.css'/>
+</head>
+<body>
+<header>
+    {{#if (emptyObject messages)}}
+        {{> flashmessage}}
+    {{/if}}
+    <h1>Metabooth</h1>
+
+</header>
+{{>nav}}
+{{{body}}}
+{{>footer}}
+
+{{#if logged}}
+    <script>
+        let ele = document.getElementById("logout-button");
+        console.log("got logout-button");
+        if (ele) {
+            ele.onclick = (even) => {
+                console.log("button clicked");
+                fetch('/users/logout', {
+                    method: "post"
+                })
+                        .then((data) => {
+                            location.replace("/");
+                        })
+            }
+        }
+    </script>
+{{/if}}
+</body>
+</html>

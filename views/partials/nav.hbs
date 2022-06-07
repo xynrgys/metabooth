@@ -1,0 +1,14 @@
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li>
+            {{#if logged}}
+                <a id="logout-button">Logout</a>
+            {{else}}
+                <a id="login-button" href="/login">Login</a>
+            {{/if}}
+        </li>
+        <li><a href="/register">Register</a></li>
+        <li><a href="/postImage">Post</a></li>
+    </ul>
+</nav>

@@ -1,0 +1,15 @@
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+<form class="post-form" method="post" enctype="multipart/form-data" action="/posts/createPost">
+    <p>Title of Post:</p>
+    <input type="text" id="title" name="title" required><br>
+    <p>Post Description:</p>
+    <input type="text" id="description" name="description" required><br>
+    <p>Choose an Image:</p>
+    <input type="file" id="chosen-image" accept="image/*" name="uploadImage" required><br>
+    <p>Accept our <a href="acceptableUsePolicy.html">Acceptable Use Policy</a>:</p>
+    <input type="checkbox" id="policy" required><br>
+    <input type="submit">
+</form>
+
